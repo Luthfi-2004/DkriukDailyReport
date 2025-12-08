@@ -35,7 +35,7 @@ A robust, role-based operational management system built with **Laravel**. This 
 
 ## 🛠️ Tech Stack
 
-* **Backend:** Laravel 10 / 11
+* **Backend:** Laravel 12
 * **Frontend:** Blade Templates, Bootstrap 4/5 (Nazox Theme)
 * **Scripting:** jQuery, AJAX (for seamless CRUD without reload)
 * **Database:** MySQL
