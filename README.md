@@ -1,59 +1,131 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Mini ERP - Operational Reporting System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A robust, role-based operational management system built with **Laravel**. This application streamlines the process of daily stock reporting, validation workflows, and analytical dashboards for multi-level users.
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Key Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🔐 Authentication & Roles
+* **Multi-role System:** Super Admin, Admin (Manager), and User (Staff).
+* **Secure Login:** Split-screen design with CSRF token protection.
+* **Profile Management:** Update profile details and upload avatars with **Cropper.js** (Image cropping & resizing).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 👑 Super Admin
+* **User Management:** Create, Edit, and Delete accounts.
+* **Master Data Management:** Manage operational items, units, and prices with auto-format Rupiah (JS).
+* **Global Dashboard:** View system-wide statistics and charts.
 
-## Learning Laravel
+### 👮 Admin (Manager)
+* **Approval Workflow:** Review daily reports with **Approve (ACC)** or **Reject** actions.
+* **Data Revision:** Edit quantity or notes on staff reports via AJAX Modals.
+* **Analytics:** Visual charts (ApexCharts) for monthly expenses and usage trends.
+* **Reporting:** Filterable tables (Date Range & Staff) with **Select2** integration.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 👷 User (Staff)
+* **Single Page Interface:** Input reports and view history in one seamless page.
+* **Dynamic Forms:** Input multiple items dynamically based on active Master Data.
+* **Status Tracking:** Real-time status updates (Pending, Approved, Rejected).
+* **Safe Edit/Delete:** Can only modify reports that are still **Pending**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛠️ Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* **Backend:** Laravel 12
+* **Frontend:** Blade Templates, Bootstrap 4/5 (Nazox Theme)
+* **Scripting:** jQuery, AJAX (for seamless CRUD without reload)
+* **Database:** MySQL
+* **Libraries:**
+    * `yajra/laravel-datatables` (Optional/if used)
+    * `select2` (Searchable Dropdowns)
+    * `apexcharts` (Data Visualization)
+    * `cropperjs` (Image Manipulation)
+    * `sweetalert2` (Popups)
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📸 Screenshots
 
-## Contributing
+*(You can upload screenshots to an 'assets' folder or an issue thread and link them here to make your repo look cool)*
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Login Page | Dashboard |
+|Data Input | Approval Modal |
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ Installation & Setup
 
-## Security Vulnerabilities
+Follow these steps to run the project locally:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/yourusername/mini-erp-laravel.git](https://github.com/yourusername/mini-erp-laravel.git)
+    cd mini-erp-laravel
+    ```
 
-## License
+2.  **Install Dependencies**
+    ```bash
+    composer install
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3.  **Environment Setup**
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+
+4.  **Database Configuration**
+    * Create a new database in MySQL (e.g., `db_minierp`).
+    * Open `.env` and update DB credentials:
+        ```env
+        DB_DATABASE=db_minierp
+        DB_USERNAME=root
+        DB_PASSWORD=
+        ```
+
+5.  **Migrate & Seed** (Important to get default accounts)
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
+
+6.  **Link Storage** (For profile pictures)
+    ```bash
+    php artisan storage:link
+    ```
+
+7.  **Run Application**
+    ```bash
+    php artisan serve
+    ```
+
+---
+
+## 👤 Default Accounts (Seeder)
+
+Use these credentials to test different roles:
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Super Admin** | `super@app.com` | `password` |
+| **Admin** | `admin@app.com` | `password` |
+| **User** | `user@app.com` | `password` |
+
+---
+
+## 🤝 Contributing
+
+1.  Fork the repository
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
