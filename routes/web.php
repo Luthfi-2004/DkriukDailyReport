@@ -42,7 +42,7 @@ Route::middleware(['auth', 'role:user'])->group(function () {
 });
 
 Route::middleware(['auth', 'role:user,admin,super_admin'])->group(function () {
-    // Route::get('/daily-report/create', [DailyReportController::class, 'create'])->name('reports.create');
+    Route::get('/daily-report/create', [DailyReportController::class, 'create'])->name('reports.create');
     Route::post('/daily-report', [DailyReportController::class, 'store'])->name('reports.store');
     Route::get('/daily-report/history', [DailyReportController::class, 'index'])->name('reports.index');
     Route::get('/daily-report/{dailyReport}', [DailyReportController::class, 'show'])->name('reports.show');
